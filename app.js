@@ -26,6 +26,8 @@ app.get("/", (r, s) => {
     s.render("index",{title:"iNVITE! Share invitation cards for every event"})
 })
 
+app.get("/invite",require('./routes/inviteRouter'))
+
 //server starts listening
 app.listen(8888, () =>
     console.log("up at http://localhost:8888")
