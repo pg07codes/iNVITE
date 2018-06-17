@@ -23,7 +23,7 @@ app.engine("hbs", hbs.express4({
 
 //home route
 app.get("/", (r, s) => {
-    s.send("home page")
+    s.render("index",{title:"iNVITE! Share invitation cards for every event"})
 })
 
 //server starts listening
