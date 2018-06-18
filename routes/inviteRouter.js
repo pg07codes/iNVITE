@@ -12,7 +12,9 @@ router.post("/createCard",(r,s)=>{
         details:r.body.details,
         oDetails:r.body.oDetails
     })
-    s.redirect(`/invite/card/`+url)
+        .then(()=>{
+            s.redirect(`/invite/card/`+url)
+        })
 })
 router.get('/card/:url',(req,res)=>{
     console.log("params"+req.params.url)
