@@ -17,7 +17,6 @@ router.post("/createCard",(r,s)=>{
 
 
 router.get("/cards/:eventId",(r,s)=>{
-    console.log("hum chala hu")
     getCardDetails(r,s)
 })
 

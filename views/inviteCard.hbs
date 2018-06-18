@@ -1,7 +1,27 @@
-<h2>this is shareable link : http://localhost:8888/invite/cards/{{url}}</h2>
-<h3>use above link to visit your page from next time on</h3>
-<h1>{{title}}</h1>
-<p>
-    {{details}}
-</p>
-<h3>{{oDetails}}</h3>
+<div class="container infoBox">
+    <div class="row justify-content-center mt-3">
+    <div class="alert alert-danger col-md-10" role="alert">
+        <b>SAVE THIS LINK!!</b> use the below link to visit your page from next time on.Please save it for sharing.
+    </div>
+    </div>
+    <div class="row justify-content-center">
+        <span class="col-md-2">this is shareable link : </span>
+        <input type="url" class="col-md-6 form-control bg-dark" value="http://localhost:8888/invite/cards/{{url}}">
+    </div>
+</div>
+<style>
+    .infoBox{
+        border:solid black 1px;
+        padding:20px;
+
+    }
+</style>
+
+
+    <h1>{{title}}</h1>
+    <p>
+        {{details}}
+    </p>
+    <h3>{{oDetails}}</h3>
+
+
