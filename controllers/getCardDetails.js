@@ -1,5 +1,6 @@
 cardStore=require('../db/model').cardStore
-module.export=function getCardDetails(r,s){
+
+module.exports=function getCardDetails(r,s){
 cardStore.find({
     where:{
         url:r.params.eventId
