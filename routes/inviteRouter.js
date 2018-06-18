@@ -15,9 +15,12 @@ router.post("/createCard",(r,s)=>{
     s.redirect(`/invite/card/`+url)
 })
 router.get('/card/:url',(req,res)=>{
+    console.log("params"+req.params.url)
      cardStore.find({
         where:{url:req.params.url}
     })  .then((data)=>{
+        console.log("data is")
+        console.log(data)
             res.render('inviteCard',{details:data.details,oDetails:data.oDetails,url:data.url})
         })
 })
