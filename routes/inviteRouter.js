@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const uid=require('../controllers/randomURL')
+const getCardDetails=require('../controllers/getCardDetails')
 
 router.post("/createCard",(r,s)=>{
     let url=uid()
@@ -7,7 +8,7 @@ router.post("/createCard",(r,s)=>{
 })
 
 router.get("/cards/:eventId",(r,s)=>{
-    s.send("custom iNVITE card to be posted to user")
+    getCardDetails(r,s)
 })
 
 
