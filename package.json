@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/pg07codes/iNVITE#readme",
   "dependencies": {
+
     "express": "^4.16.3",
-    "express-hbs": "^1.0.4"
+    "express-hbs": "^1.0.4",
   }
 }
