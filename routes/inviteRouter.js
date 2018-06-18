@@ -18,12 +18,11 @@ router.get('/card/:url',(req,res)=>{
      cardStore.find({
         where:{url:req.params.url}
     })  .then((data)=>{
-            res.render('inviteCard',{title:data.title,details:data.details,oDetails:data.oDetails,url:data.url})
+            res.render('inviteCard',{details:data.details,oDetails:data.oDetails,url:data.url})
         })
 })
 
 router.get("/cards/:eventId",(r,s)=>{
-    console.log("hum chala hu")
     getCardDetails(r,s)
 })
 
