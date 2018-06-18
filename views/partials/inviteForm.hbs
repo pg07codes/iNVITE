@@ -1,11 +1,14 @@
 <div class="container mt-5">
 
-    <form class="row justify-content-center">
+    <form action="/invite/createCard" method="post" class="row justify-content-center">
         <div class="form-group col-md-10">
-            <input name="title" id="title" type="text" class="form-control" placeholder="Event Heading">
+            <input name="title" id="title" type="text" class="form-control" placeholder="Event Heading" required>
         </div>
         <div class="form-group col-md-10">
-            <textarea name="details" id="details" class="form-control" rows="5" placeholder="Event Details ..."></textarea>
+            <textarea name="details" id="details" class="form-control" rows="5" placeholder="Event Details ..." required></textarea>
+        </div>
+        <div class="form-group col-md-10">
+            <input name="oDetails" id="oDetails" class="form-control" placeholder="Organiser's Details" required>
         </div>
         <!--<div class="form-group col-md-10">-->
             <!--<label for="file">Example file input</label>-->
@@ -13,44 +16,8 @@
         <!--</div>-->
         <!--this part is for uploading photo with invite card which is not made as of now-->
         <div class="form-group col-md-10">
-            <button type="submit" class="btn btn-success">Submit</button>
-            <button type="button" onclick="setPreview()" class="btn btn-primary" data-toggle="modal" data-target="#preview">
-                Launch demo modal
-            </button>
+            <button type="submit" class="btn btn-success">Get iNVITE page</button>
         </div>
     </form>
-
-    <div class="modal fade" id="preview" tabindex="-1" role="dialog" aria-labelledby="titlePreview" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="titlePreview">
-                        <!--title will come in here-->
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="detailsPreview">
-                    <!--details will go in here-->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<script>
-
-
-function setPreview() {
-    let $titleValue = $("#title").val()
-    let $detailsValue = $("#details").val()
-    $("#titlePreview").append($titleValue)
-    $("#detailsPreview").append($detailsValue)
-}
-
-</script>
