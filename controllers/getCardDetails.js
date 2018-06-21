@@ -6,6 +6,6 @@ cardStore.find({
         url:r.params.eventId
     }
 }).then((d)=>{
-    s.send(d)
+    s.render('inviteCard',{title:d.title,details:d.details,oDetails:d.oDetails,createdOn:d.createdAt.toDateString()})
 })
 }

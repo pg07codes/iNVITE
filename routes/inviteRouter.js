@@ -13,7 +13,8 @@ router.post("/createCard",(r,s)=>{
         oDetails:r.body.oDetails
     })
         .then((data)=>{
-            s.render('inviteCard',{details:data.details,oDetails:data.oDetails,url:data.url})
+            //s.send(data)
+            s.render('inviteCard',{title:data.title,details:data.details,oDetails:data.oDetails,url:data.url,isTemp:true,createdOn:data.createdAt.toDateString()})
         })
 })
 
