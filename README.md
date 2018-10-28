@@ -1,4 +1,4 @@
-# iNVITE
+# iNVITE v2.0
 
 ## What it is?
 
