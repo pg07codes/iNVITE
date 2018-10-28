@@ -6,6 +6,7 @@ const hbs = require("express-hbs")
 const app = express()
 
 
+
 //serving files and parsing request body
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
