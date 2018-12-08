@@ -1,4 +1,4 @@
-# invite
+# invite (the project is on hold here and is being worked upon in another repo)
 
 ## Project setup
 ```
